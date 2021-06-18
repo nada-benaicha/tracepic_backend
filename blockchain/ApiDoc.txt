@@ -1,0 +1,367 @@
+/************ create projet ***************/
+
+-----------------------
+url : http://localhost:8080/api/createProjet
+methode : Post 
+Input : 
+    {
+        "projetName":"covide19",
+        "startDate":"12/15/2021",
+        "endDate":"12/15/2022",
+        "mangerName":"saif",
+        "description":"description",
+        "objectif":"no objectif",
+        "labName":"labo paris"
+    }
+response : 
+status (200) : 
+{
+    "value": {
+        "nonce": 83,
+        "gasPrice": {
+            "type": "BigNumber",
+            "hex": "0x3b9aca00"
+        },
+        "gasLimit": {
+            "type": "BigNumber",
+            "hex": "0x027ffd"
+        },
+        "to": "0x6c49256a421c70ff0D5B192E75b06833771d05fa",
+        "value": {
+            "type": "BigNumber",
+            "hex": "0x00"
+        },
+        "data": "0x6c1d0358000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000002e516d5847556f63753961774368354453643842655639524d627167746a7a74776631636271456573593745584278000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a6c61626f207061726973000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "chainId": 4,
+        "v": 43,
+        "r": "0x455c280edf0b38a679b14a5a1944adb7f061911dd3c6720da6793fdadcd255df",
+        "s": "0x458245efe0da1628f53845a81eb277f8d5ee1f1d3b19085577f4bde999ed16e8",
+        "from": "0x81C6BDF0882CBAB188fABD5dBE977acBDb1fCC10",
+        "hash": "0x345d15f89654af2fc3bda348dd273d37b820d37ab146d7976bea71a529576d56",
+        "type": null
+    },
+    "projetCid": "QmXGUocu9awCh5DSd8BeV9RMbqgtjztwf1cbqEesY7EXBx"
+}
+
+
+/************ create Protocole ***************/
+url : http://localhost:8080/api/createProtocole
+methode : Post 
+input : 
+    {
+        "protocoleTitle":"Protocole covide 19",
+        "description":"salut Protocole",
+        "objectif":"no objectif yet Protocole",
+        "projetCid":"QmXGUocu9awCh5DSd8BeV9RMbqgtjztwf1cbqEesY7EXBx",
+        "labName":"labo paris"
+    }
+
+response :        
+status(200) : 
+{
+    "value": {
+        "nonce": 89,
+        "gasPrice": {
+            "type": "BigNumber",
+            "hex": "0x3b9aca00"
+        },
+        "gasLimit": {
+            "type": "BigNumber",
+            "hex": "0x02077d"
+        },
+        "to": "0x6c49256a421c70ff0D5B192E75b06833771d05fa",
+        "value": {
+            "type": "BigNumber",
+            "hex": "0x00"
+        },
+        "data": "0xd8f7dfcd000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000000e000000000000000000000000000000000000000000000000000000000000001200000000000000000000000000000000000000000000000000000000000000140000000000000000000000000000000000000000000000000000000000000002e516d62756a7034564b6a654456624c477046613561356e6b50733962397379744b597950586a586151716f737768000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a6c61626f2070617269730000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "chainId": 4,
+        "v": 43,
+        "r": "0xe69c79c29bbf56fa7b572c0ff5bb6cad630524842fab20cd39ab455f39d5ecc8",
+        "s": "0x5576689ce1de4a762bec0936ca2b88a9faedb096f9cf2fd465280fdd99843b55",
+        "from": "0x81C6BDF0882CBAB188fABD5dBE977acBDb1fCC10",
+        "hash": "0xa101ab6fa0f2f1b4c636bc708c3aac4b2ef75c2fc3ce5c41a6e892664833014f",
+        "type": null
+    },
+    "value2": {
+        "nonce": 90,
+        "gasPrice": {
+            "type": "BigNumber",
+            "hex": "0x3b9aca00"
+        },
+        "gasLimit": {
+            "type": "BigNumber",
+            "hex": "0x01ab77"
+        },
+        "to": "0x6c49256a421c70ff0D5B192E75b06833771d05fa",
+        "value": {
+            "type": "BigNumber",
+            "hex": "0x00"
+        },
+        "data": "0x9b708c70000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000002e516d5847556f63753961774368354453643842655639524d627167746a7a74776631636271456573593745584278000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002e516d62756a7034564b6a654456624c477046613561356e6b50733962397379744b597950586a586151716f737768000000000000000000000000000000000000",
+        "chainId": 4,
+        "v": 44,
+        "r": "0x2274ac2cea8e942fb6d7efe2f39a0a71cace2e1c7a6311f6a5b7477e9649bf75",
+        "s": "0x62a29d2e5a64613c9d21a263164bfa8603e7fefb9a835dbc4bffc27fab710900",
+        "from": "0x81C6BDF0882CBAB188fABD5dBE977acBDb1fCC10",
+        "hash": "0x357c3ae5c1986ea2b3ee732793bddaed3057522a3129a57941032cffe3300cc5",
+        "type": null
+    },
+    "PorotocoleCid": "Qmbujp4VKjeDVbLGpFa5a5nkPs9b9sytKYyPXjXaQqoswh"
+}
+
+
+/************ add Block To Protocole ***************/
+url : http://localhost:8080/api/addBlockToProtocole
+methode : Post 
+input : 
+    {
+        "blockTitle":"block1",
+        "description":"salut block1",
+        "objectif":"kill mouses",
+        "parameters":"covid 19",
+        "type":"corona",
+        "machine":"scanner",
+        "resources":"humaine",
+        "protocoleCid":"Qmbujp4VKjeDVbLGpFa5a5nkPs9b9sytKYyPXjXaQqoswh"
+    }
+response :         
+statux (200) : 
+{
+    "value": {
+        "nonce": 95,
+        "gasPrice": {
+            "type": "BigNumber",
+            "hex": "0x3b9aca00"
+        },
+        "gasLimit": {
+            "type": "BigNumber",
+            "hex": "0x0693af"
+        },
+        "to": "0x6c49256a421c70ff0D5B192E75b06833771d05fa",
+        "value": {
+            "type": "BigNumber",
+            "hex": "0x00"
+        },
+        "data": "0x6d6bf32e000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000002e516d62756a7034564b6a654456624c477046613561356e6b50733962397379744b597950586a586151716f737768000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002e516d63634e6b65344a6134785943574a636b37674a43356837705a466565616d466a4376544d723634504a4c7078000000000000000000000000000000000000",
+        "chainId": 4,
+        "v": 44,
+        "r": "0x1d9feb972fe839c75c16b08e173ef5c7b9af0f602605dde48f094072f0223db3",
+        "s": "0x5a0abef1ed11188ad80aaa422acd7ad74ed6f3f3b50874064e29535d257815ea",
+        "from": "0x81C6BDF0882CBAB188fABD5dBE977acBDb1fCC10",
+        "hash": "0xa0f337ad34cc098c05b5318ddddfedf015847e8a175b2e1f070fcaade364f294",
+        "type": null
+    },
+    "block": "QmccNke4Ja4xYCWJck7gJC5h7pZFeeamFjCvTMr64PJLpx"
+}
+
+
+
+/************ add Group To Protocole ***************/
+url : http://localhost:8080/api/addGroupToProtocole
+methode : Post 
+input : 
+    {
+        "groupName":"groupe covide",
+        "nature":"souris",
+        "elementNumber":"5",
+        "description":"salut groupe covide",
+        "protocoleCid":"Qmbujp4VKjeDVbLGpFa5a5nkPs9b9sytKYyPXjXaQqoswh"
+    }
+response :         
+statux (200) : 
+{
+    "value": {
+        "nonce": 91,
+        "gasPrice": {
+            "type": "BigNumber",
+            "hex": "0x3b9aca00"
+        },
+        "gasLimit": {
+            "type": "BigNumber",
+            "hex": "0x0222e1"
+        },
+        "to": "0x6c49256a421c70ff0D5B192E75b06833771d05fa",
+        "value": {
+            "type": "BigNumber",
+            "hex": "0x00"
+        },
+        "data": "0x5ba48f7e000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000002e516d64516931444e464852334b4a615a554d7834564657503746444d4e446a63456758506d6a3879686e387a77610000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "chainId": 4,
+        "v": 43,
+        "r": "0xacf6d941b449872f1bb661d1aa42d68ffdda62e17e950e6e2bfbb72d1a3a0870",
+        "s": "0x46251d7f75d72f7591958bbfc2c2d6216a476d187ea156e583cd23fdd2d7f1ae",
+        "from": "0x81C6BDF0882CBAB188fABD5dBE977acBDb1fCC10",
+        "hash": "0x33ecd5eaf9181f10ab6cfc00782129a1c962f3daac6b6acef0df6a99d3ee47da",
+        "type": null
+    },
+    "value2": {
+        "nonce": 92,
+        "gasPrice": {
+            "type": "BigNumber",
+            "hex": "0x3b9aca00"
+        },
+        "gasLimit": {
+            "type": "BigNumber",
+            "hex": "0x07e1aa"
+        },
+        "to": "0x6c49256a421c70ff0D5B192E75b06833771d05fa",
+        "value": {
+            "type": "BigNumber",
+            "hex": "0x00"
+        },
+        "data": "0xff64bf51000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000002e516d62756a7034564b6a654456624c477046613561356e6b50733962397379744b597950586a586151716f737768000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002e516d64516931444e464852334b4a615a554d7834564657503746444d4e446a63456758506d6a3879686e387a7761000000000000000000000000000000000000",
+        "chainId": 4,
+        "v": 43,
+        "r": "0x346aca9334bb5b610e92e6428a36b36b556dbaeacafc89662d0d54c790e191e2",
+        "s": "0x1c9d317476eb4f295b300955071a9e23b0620f6c04d12d724a2aa34f69ce72b2",
+        "from": "0x81C6BDF0882CBAB188fABD5dBE977acBDb1fCC10",
+        "hash": "0x666714465abb9f7312925feab1c049042276bf890686ec65c225f0c46a0b1cba",
+        "type": null
+    },
+    "groupCid": "QmdQi1DNFHR3KJaZUMx4VFWP7FDMNDjcEgXPmj8yhn8zwa"
+}
+
+/************ add Operation To group ***************/
+url : http://localhost:8080/api/addOperationTogroup
+methode : Post 
+input : 
+    {
+        "operationTitle":"operation12",
+        "operationType":"OPE",
+        "daysNumbre":"3",
+        "operationPerDay":"5",
+        "groupCid":"QmdQi1DNFHR3KJaZUMx4VFWP7FDMNDjcEgXPmj8yhn8zwa"
+    }
+response :         
+status (200) : 
+{
+    "value": {
+        "nonce": 94,
+        "gasPrice": {
+            "type": "BigNumber",
+            "hex": "0x3b9aca00"
+        },
+        "gasLimit": {
+            "type": "BigNumber",
+            "hex": "0x01ee6f"
+        },
+        "to": "0x6c49256a421c70ff0D5B192E75b06833771d05fa",
+        "value": {
+            "type": "BigNumber",
+            "hex": "0x00"
+        },
+        "data": "0xc52e4cf9000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000002e516d64516931444e464852334b4a615a554d7834564657503746444d4e446a63456758506d6a3879686e387a7761000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002e516d53777172344557666f6e395a6774773161516a5031424a5335625a5161463437625464656a4a786539356568000000000000000000000000000000000000",
+        "chainId": 4,
+        "v": 44,
+        "r": "0xf487806cc01f76634c493c5c7d03623046ca78f42eb9fc06a8e84c8268bcf479",
+        "s": "0x0f65ebbbdcde1db604c705115f2f5e2a2e14592add9c27db72c2a8325dc4de3f",
+        "from": "0x81C6BDF0882CBAB188fABD5dBE977acBDb1fCC10",
+        "hash": "0x5c05376f0c92b36d4eb0f099d115744d94dcbfa21c40713cdeac4a17657b3d8f",
+        "type": null
+    },
+    "operationCid": "QmSwqr4EWfon9Zgtw1aQjP1BJS5bZQaF47bTdejJxe95eh"
+}
+
+
+/************ get All Projet For Lab  ***************/
+url : http://localhost:8080/api/getAllProjetForLab
+methode : Post 
+input : 
+    {
+        "lab":"labo paris"
+    }
+response :    
+status (200) : 
+[
+    {
+        "projetCID": "QmXGUocu9awCh5DSd8BeV9RMbqgtjztwf1cbqEesY7EXBx",
+        "projetName": "covide19",
+        "startDate": "12/15/2021",
+        "endDate": "12/15/2022",
+        "mangerName": "saif",
+        "description": "description",
+        "objectif": "no objectif"
+    }
+]
+
+/************ get All Protocole For Lab  ***************/
+url : http://localhost:8080/api/getAllProtocoleForLab
+methode : Post 
+input : 
+    {
+        "lab":"labo paris"
+    }
+response :         
+status (200) : 
+[
+    {
+        "protocoleCID": "Qmbujp4VKjeDVbLGpFa5a5nkPs9b9sytKYyPXjXaQqoswh",
+        "protocoleTitle": "Protocole covide 19",
+        "description": "salut Protocole",
+        "objectif": "no objectif yet Protocole"
+    }
+]
+
+
+/************ get Block Of Protocole  ***************/
+url : http://localhost:8080/api/getBlockOfProtocole
+methode : Post 
+input : 
+    {
+        "protocoleCid":"Qmbujp4VKjeDVbLGpFa5a5nkPs9b9sytKYyPXjXaQqoswh"
+    }
+response :         
+status (200) : 
+[
+    {
+        "blockCid": "QmccNke4Ja4xYCWJck7gJC5h7pZFeeamFjCvTMr64PJLpx",
+        "blockTitle": "block1",
+        "description": "salut block1",
+        "objectif": "kill mouses",
+        "parameters": "covid 19",
+        "type": "corona",
+        "machine": "scanner",
+        "resources": "humaine"
+    }
+]
+
+
+/************ get Group Of Protocole  ***************/
+url : http://localhost:8080/api/getGroupOfProtocole
+methode : Post 
+input : 
+{
+    "protocoleCid":"Qmbujp4VKjeDVbLGpFa5a5nkPs9b9sytKYyPXjXaQqoswh"
+}
+response :         
+status (200) : 
+[
+    {
+        "groupCid": "QmdQi1DNFHR3KJaZUMx4VFWP7FDMNDjcEgXPmj8yhn8zwa",
+        "groupName": "groupe covide",
+        "nature": "souris",
+        "elementNumber": "5",
+        "description": "salut groupe covide"
+    }
+]
+
+/************ get Operation Of Group  ***************/
+url : http://localhost:8080/api/getOperationOfGroup
+methode : Post 
+input : 
+{
+    "groupCid":"QmdQi1DNFHR3KJaZUMx4VFWP7FDMNDjcEgXPmj8yhn8zwa"
+}
+response :         
+
+status (200) : 
+[
+    {
+        "OperationCid": "QmSwqr4EWfon9Zgtw1aQjP1BJS5bZQaF47bTdejJxe95eh",
+        "operationTitle": "operation12",
+        "operationType": "OPE",
+        "daysNumbre": "3",
+        "operationPerDay": "5"
+    }
+]
