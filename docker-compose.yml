@@ -1,0 +1,40 @@
+version: "3"
+services:
+  ############ users SERVICES module container ############
+  user-services:
+    container_name: user-services
+    build:
+      context: ./user-services
+      dockerfile: Dockerfile
+    image: node:12.9
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./user-services:/usr/src
+      - /usr/src/node_modules
+  ############  Search service module container ############
+  search-services:
+    container_name: search-services
+    build:
+      context: ./Search-service
+      dockerfile: Dockerfile
+    image: node:12.9
+    ports:
+      - "8082:8082"
+    volumes:
+      - ./Search-service:/usr/src
+      - /usr/src/node_modules
+  ############  Search service module container ############
+  project-service:
+    container_name: project-service
+    build:
+      context: ./project-service
+      dockerfile: Dockerfile
+    image: node:12.9
+    ports:
+      - "8081:8081"
+    volumes:
+      - ./project-service:/usr/src
+      - /usr/src/node_modules
+
+      

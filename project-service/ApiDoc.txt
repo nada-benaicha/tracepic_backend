@@ -1,0 +1,90 @@
+/************ addNewProject ***************/
+
+-----------------------
+url : http://localhost:8081/api/projectServices/addNewProject
+methode : Post 
+Input : 
+{
+                "titreProjet" : "covid-19",
+                "description" : "virus covid 19",
+                "objectif" : "test et analyse",
+                "dateDeb" : "2021-05-01",
+                "dateFin" : "2021-07-20",
+                "userId" : 3
+}
+
+/************** add new protocole **************/
+url : http://localhost:8081/api/projectServices/addNewProtocole
+methode : Post
+input : 
+{
+   "titreProtocole" : "protocole1",
+    "description" : "virus covid 19",
+    "objectif" : "test",
+    "projectId" : 1
+                
+}
+
+
+
+/************** getAllProjectForLabo **************/
+url : http://localhost:8081/api/projectServices/getAllProjectForLabo/10(profilLaboId)
+methode : get
+
+
+
+/************** addExprimentalGroup ******************/
+url : http://localhost:8081/api/projectServices/addExprimentalGroup
+methode : post 
+input : 
+{
+   "nomGroupe" : "protocole1",
+    "nature" : "virus covid 19",
+    "nbElement" : 5,
+    "projectId" : 1,
+    "description" :"hhhhhhhhhh",
+    "protocolId" : 1,
+    "nomOperation" : "aa",
+    "typeOperationId" :1 ,
+    "nbJours" : 3,
+    "nbOperationParJour" : 4
+                
+}
+
+
+
+/************** getAllTypeOperation **************/
+url : http://localhost:8081/api/projectServices/getAllTypeOperation
+methode : get
+
+
+/************** addBloc ******************/
+url : http://localhost:8081/api/projectServices/addBloc
+methode : post 
+input : 
+{
+   "titreBloc" : "protocole1",
+    "description" : "virus covid 19",
+    "protocolId" : 2,
+    "typeBlocId" : 1,
+    "machineId" : 1,
+    "objectif" : "protocole1",
+    "parametres" : "virus covid 19"
+}
+
+/************** getAllTypeBloc **************/
+url : http://localhost:8081/api/projectServices/getAllTypeBloc
+methode : get
+
+/************** getAllBlocForSpecificProtocol **************/
+url : http://localhost:8081/api/projectServices/getAllBlocForSpecificProtocol(protocolId)
+methode : get
+
+
+/************** getDetailsBloc **************/
+url : http://localhost:8081/api/projectServices/getDetailsBloc
+methode : post
+input : 
+{
+    "protocolId" : 2
+}

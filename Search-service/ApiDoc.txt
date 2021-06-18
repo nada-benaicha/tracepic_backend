@@ -1,0 +1,47 @@
+
+
+/************ searchPersonnels ***************/
+url : http://localhost:8082/api/searchServices/searchPersonnels
+methode : Post 
+input : 
+      {
+    "profilId": 3,
+    "page" : 1,
+    "pageSize" : 10,
+    "poste": "Chercheur",
+    "adresseEmail": "rrrrr@gmail.com",
+    "nomPrenomPersonel": "rrrrrr"
+
+}
+
+
+/************ searchMachines ***************/
+url : http://localhost:8082/api/searchServices/searchMachines
+methode : Post 
+input : 
+
+
+{
+    "profilId": 3,
+    "page" : 1,
+    "marque": "machine marque",
+    "numeroSerie": "411154415187",
+    "pageSize" : 10
+}
+
+
+/************ searchProject ***************/
+url : http://localhost:8082/api/searchServices/searchProject
+methode : Post 
+input : 
+
+{
+    "profilId": 1,
+    "page" : 1,
+    "titreProjet": "covid",
+    "nomResponsable": "nada",
+    "dateDeb" : "2021-05-01",
+    "dateFin" : "2021-07-20",
+    "statut" : "",
+     "pageSize" : 10
+}

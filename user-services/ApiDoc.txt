@@ -1,0 +1,254 @@
+/************ inscription ***************/
+
+-----------------------
+url : http://localhost:8080/api/userServices/signup
+methode : Post 
+Input : 
+{
+    "nomResponsable" : "nada",
+    "nomLaboratoire" : "laboTest",
+    "pays" : "monastir",
+    "email" : "nada.benaicha@hotmail.com",
+    "role" : "labo",
+    "mobile" : "",
+    "password" : "passwordnada"
+}
+
+
+*******input clienttt *******
+{
+"fullName" : "nada client",
+"pays" : "monastir",
+"email" : "nada.aicha1234567@hotmail.com",
+"role" : "client",
+"mobile" : "22",
+"password" : "passwordnada"
+}
+
+response : 
+status(200) : success 
+status(409) : email is already in use!
+status(400) : Data misssing
+
+
+/************ Connexion ***************/
+url : http://localhost:8080/api/userServices/signin
+methode : Post 
+input : 
+      {
+"email" : "nada.benaicha@hotmail.com",
+"password" : "passwordnada"
+}
+        
+status(404) : User Not Found
+status(403) : Invalid Password!
+status(402) : Your account has not been verified.'
+status(401) : the token has expired
+
+
+/********************* verification utilisateur ***********************/
+"0" : n'est pas verifier 
+"1" : verifier 
+"2" : valider par l"admin
+"3" : refus
+url : http://localhost:8080/api/userServices/verify
+methode : post
+input : {
+    "CodeEmailVerification" : "95a2bfd0de84"
+}
+
+/******************* verification admin **************************/
+url :  http://localhost:8080/api/userServices/ValidationAdmin
+methode : post
+
+input : 
+{
+"userId" : 3
+}
+
+
+/***************** addUpdateProfil *******************************/
+url : http://localhost:8080/api/userServices/addUpdateProfil
+methode : post
+
+input : 
+{
+"userId" : 3,
+ "rcs" : "req.body.rcs",
+	 "presentation" : "req.body.presentation",
+	 "siteWeb" : "req.body.siteWeb",
+     "profilId" : 1,
+	 "mailContact" : "req.body.mailContact",
+	 "adresseLabo" : "req.body.adresseLabo",
+	 "codePostale" :"5021",
+     "base64ImageData" : "",
+     "ancienPhoto" : ""
+}
+response : 
+{
+    "id": 1,
+    "presentation": "req.body.presentation",
+    "siteWeb": "req.body.siteWeb",
+    "mailContact": "req.body.mailContact",
+    "adresseLabo": "req.body.adresseLabo",
+    "logo": "user-21280651256.webp",
+    "codePostale": "5021",
+    "rcs": "req.body.rcs"
+}
+
+/******************** *************************/
+url : http://localhost:8080/api/userServices/addPersonnel
+methode : post
+
+input : 
+{
+"userId" : 3,
+"nomPrenomPersonel" :"nada" ,
+ "adresseEmail" : "nada.benaicha@hotmail.com" ,
+  "poste" : "test"
+}
+
+/***************************** ****************************/
+url : http://localhost:8080/api/userServices/updatePersonnel
+methode : post 
+input : 
+{
+"personnelId" : 1,
+"nomPrenomPersonel" :"yosra" ,
+ "adresseEmail" : "yosra.dardouri@hotmail.com" ,
+  "poste" : "test"
+}
+
+response : 
+
+{
+    "id": 1,
+    "nomPrenomPersonel": "yosra",
+    "adresseEmail": "yosra.dardouri@hotmail.com",
+    "poste": "test",
+    "profilId": 1
+}
+
+
+/************************* **************************/
+url  : http://localhost:8080/api/userServices/getPersonnelLabo/1 (profilId)
+methode : get
+/******************* ******************************/
+url : http://localhost:8080/api/userServices/deletePersonnel
+methode : delete
+input : 
+{
+"personnelId" : 1
+}
+
+
+/******************************** getAccount *****************************************/
+url : http://localhost:8080/api/userServices/getAccount
+methode : post 
+input : 
+{
+"privateKey" : "f7a21020060e354af71ece7bd47dcb3f43cc4a7315c7a38ac01dd93f5ade0ad7"
+}
+
+/************************* getProfil **************************/
+url  : http://localhost:8080/api/userServices/getProfil/1 (userId)
+methode : get
+
+/******************************* getListLabo ***********************************/
+url : http://localhost:8080/api/userServices/getListLabo
+methode : post
+input : 
+{
+    "pageSize" : 30 , 
+    "page": 1 ,
+   "nomLaboratoire" : "laboTest",
+   "nomResponsable" : "nada",
+   "email" : "nada.benaicha@hotmail.com",
+   "pays" : "monastir",
+   "isVerified" : "2",
+   "mobile" : null,
+   "dateDeb" : "2021-05-06",
+   "dateFin" : "2021-05-07"
+}
+
+/*************************** refusByAdmin *****************************/
+url : http://localhost:8080/api/userServices/refusByAdmin
+methode : post
+input : 
+{
+    "userId"  : 
+}
+
+
+/*********************** get list client ***************************/
+url : http://localhost:8080/api/userServices/getListClient
+methode : post
+input : 
+{
+    "pageSize" : 30 , 
+    "page": 1 ,
+   "fullName" : "nada",
+   "email" : "nada.aicha123@hotmail.com",
+   "pays" : "monastir",
+   "isVerified" : "2",
+   "mobile" : null,
+   "dateDeb" : "2021-05-06",
+   "dateFin" : "2021-05-07"
+}
+
+/******************* delete client ******************************/
+url : http://localhost:8080/api/userServices/deleteClient
+methode : delete
+input : 
+{
+"clientId" : 1
+}
+
+
+/******************* updateInfoClient ******************************/
+url : http://localhost:8080/api/userServices/updateInfoClient
+methode : post
+input : 
+{
+"fullName" : "nada client",
+"pays" : "monastir",
+"email" : "nada.aicha1234567@hotmail.com",
+"mobile" : "22",
+}
+
+
+
+
+/******************** addMachine *************************/
+url : http://localhost:8080/api/userServices/addMachine
+methode : post
+
+input : 
+{
+"userId" : 3,
+	"marque" : "",
+	"numeroSerie" : ""
+}
+
+/***************************** updateMachine ****************************/
+url : http://localhost:8080/api/userServices/updateMachine
+methode : post 
+input : 
+{
+"marque" :
+, "numeroSerie"  :
+ , "machineId"
+}
+
+
+
+/************************* **************************/
+url  : http://localhost:8080/api/userServices/getMachineLabo/1 (profilId)
+methode : get
+/******************* deleteMachine ******************************/
+url : http://localhost:8080/api/userServices/deleteMachine
+methode : delete
+input : 
+{
+"machineId" : 1
+}
